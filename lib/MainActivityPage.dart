@@ -43,9 +43,7 @@ class _MainActivityState extends State<MainActivity> {
                     child: ElevatedButton(
                       onPressed: () {
                         this.task.remove(task);
-                        //myTaskList.removeTask(index);
                         Navigator.of(context).pop();
-                        //updateUI();
                         setState(() {});
                       },
                       child: const Text('Delete'),
