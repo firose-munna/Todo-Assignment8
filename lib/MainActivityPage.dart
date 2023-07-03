@@ -60,46 +60,7 @@ class _MainActivityState extends State<MainActivity> {
     );
   }
 
-  void DeleteTaskBottomSheet(Todo task) {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) {
-        return Container(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Task Details',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 16.0),
-              Text('Title: ${task.title}'),
-              Text('Description: ${task.description}'),
-              Text('Days Required: ${task.requiredDays.toString()}'),
-              const SizedBox(height: 16.0),
-              ElevatedButton(
-                //style: ElevatedButton.styleFrom(minimumSize: Size(100, 10)),
-                onPressed: () {
-                  this.task.remove(task);
-                  setState(() {
-                   // task.;
-                  });
-                  Navigator.of(context).pop();
-                },
-                child: const Text('Delete'),
-              ),
-            ],
-          ),
-        );
-      },
-    );
-  }
-
+  
   AlertMessage(context) {
     return showDialog(
         context: context,
